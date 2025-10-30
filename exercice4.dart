@@ -29,3 +29,16 @@ class Film extends Media {
     print("Ceci est un Film : $titre (${dureeMinutes} min).");
   }
 }
+
+void main() {
+  List<Media> catalogue = [];
+
+  catalogue.add(Livre("Les poussins tetus", "fables de la montagne"));
+  catalogue.add(Livre("aladin", "disneyland"));
+  catalogue.add(Film("cendrillon", 208));
+  catalogue.add(Film("Titanic", 135));
+
+  for (var media in catalogue) {
+    media.afficherType();
+  }
+}
